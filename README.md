@@ -12,9 +12,10 @@ npm run build
 ```
 
 # Todo
+* Use service worker to have the site working offline
 * [ ] Plan basic components required for the template
-  * Event Calendar 
-  * Event cards 
+  * Event Calendar
+  * Event Cards
   * Gallery
   * ...
 * [x] Form a repo
