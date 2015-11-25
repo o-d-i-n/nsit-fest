@@ -16,15 +16,29 @@ class Event extends React.Component {
 }
 
 class EventList extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      keyword: ""
+    };
+  }
+  searchHandler (e) {
+    this.setState({ keyword: e.currentTarget.value || "" });
+  }
+  searchFilter (d) {
+    let lowerCaseKeyword = this.state.keyword.toLowerCase();
+    return [d.title, d.desc, d.last_date, d.event_date, d.category]
+    .reduce((condition, key) => condition || key.toLowerCase().includes(lowerCaseKeyword), false);
+  }
   render() {
     let eventList = this.props.data;
-    let eventListDOM = eventList.map(e => {
-      return (
-        <Event id={e.title} data={e}/>
-      );
-    });
+    let eventListDOM = eventList.filter(d => this.searchFilter(d)).map(e => (
+      <Event id={e.title} data={e}/>
+    ));
     return (
       <div>
+        <h2> Event List </h2>
+        <input type="text" className="form-control" placeholder="Search" onChange={e => this.searchHandler(e)} />
         {eventListDOM}
       </div>
     );
