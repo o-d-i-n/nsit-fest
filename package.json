@@ -16,8 +16,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "history": "^1.13.1",
     "jquery": "^2.1.4",
-    "react": "^0.14.3"
+    "react": "^0.14.3",
+    "react-router": "^1.0.0"
   },
   "devDependencies": {
     "babel-plugin-transform-react-jsx": "^6.2.0",
