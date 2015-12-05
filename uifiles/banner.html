@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<style>
+body
+{
+width:100%;
+height:100%;
+overflow:hidden;
+background-color:lightgrey;
+}
+
+.rel
+{
+position:relative;
+width:100%;
+height:100%;
+}
+
+.bigpuzzle
+{
+	position:absolute;
+	width:300px;
+	height:300px;
+	transform:rotateZ(45deg);
+	box-shadow:0px 0px 8px rgb(101, 98, 98);
+	overflow:hidden;
+}
+#centerpiece
+{
+	left:calc(50% - 150px);
+	top:calc(50% - 150px);
+}
+.imageholder[id^="navimg"]
+{
+		position:absolute;
+		display:block;
+		top:-70px;
+		left:-70px;
+		transform:rotateZ(-45deg);
+		width:145%;
+		height:145%;
+}
+#navimg1
+{
+	opacity:1;
+	background:url(moksha.jpg) no-repeat center;
+	background-size:cover;
+	transition:opacity 1s;
+}
+#navimg2
+{
+	opacity:0;
+	background:url(landing.jpg) no-repeat center;
+	background-size:cover;
+	transition:opacity 1s;
+}
+#navimg3
+{
+	opacity:0;
+	background:url(rendezvous.jpg) no-repeat center;
+	background-size:cover;
+	transition:opacity 1s;
+}
+#navimg4
+{
+	opacity:0;
+	background:url(possimpible.jpg) no-repeat center;
+	background-size:cover;
+	transition:opacity 1s;
+}
+#piece1
+{
+ top:calc(50% - 375px);
+ left:calc(50% + 75px);
+ background-color:red;
+}
+#piece2
+{
+ bottom:calc(50% - 375px);
+ left:calc(50% + 75px);
+ background-color:blue;
+}
+#piece3
+{
+ top:calc(50% - 150px);
+ left:calc(50% + 300px);
+ background-color:grey;
+}
+#piece4
+{
+ top:calc(50% - 375px);
+ right:calc(50% + 75px);
+ background-color:black;
+}
+#piece5
+{
+ bottom:calc(50% - 375px);
+ right:calc(50% + 75px);
+ background-color:yellow;
+}
+#piece6
+{
+ top:calc(50% - 150px);
+ right:calc(50% + 300px);
+ background-color:green;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<div class="bigpuzzle" id="centerpiece">
+
+<div class="rel">
+
+<div class="imageholder" id="navimg1">
+</div>
+<div class="imageholder" id="navimg2">
+</div>
+<div class="imageholder" id="navimg3">
+</div>
+<div class="imageholder" id="navimg4">
+</div>
+
+</div>
+</div>
+
+
+<div class="bigpuzzle" id="piece1">
+
+</div>
+<div class="bigpuzzle" id="piece2">
+
+</div>
+<div class="bigpuzzle" id="piece3">
+
+</div>
+<div class="bigpuzzle" id="piece4">
+
+</div>
+<div class="bigpuzzle" id="piece5">
+
+</div>
+<div class="bigpuzzle" id="piece6">
+
+</div>
+<!--height:320px;-->
+
+<script>
+var i = 0;
+function repeat()
+{
+setTimeout(function(){
+if(i!=0)
+{
+var fadeelem = document.getElementById('navimg'+i);
+fadeelem.style.opacity = 0;
+}
+++i;
+if(i == 5)
+i=1;
+var newelem = document.getElementById('navimg'+i);
+newelem.style.opacity = 1;
+repeat();
+},3000);
+}
+
+repeat();
+
+
+</script>
+</body>
+</html>
