@@ -45,11 +45,11 @@ class EventList extends React.Component {
   }
 }
 
-class Menu_Tiles extends React.Component {
+class MenuTiles extends React.Component {
   render() {
     return (
-      <div class="pt-page pt-page-{this.props.num}">
-        <div class="rel">
+      <div className={"pt-page pt-page-"+this.props.num}>
+        <div className="rel">
           <div>
             <h1><span>Nsit's</span><strong>Moksha</strong> '15</h1>
           </div>
@@ -60,12 +60,13 @@ class Menu_Tiles extends React.Component {
   }
 }
 
-class renderTiles extends React.Component {
+class RenderTiles extends React.Component {
   render() {
     let allTiles = this.props.data;
-    let renderedTiles = allTiles.map(i => (<Menu_Tiles num={i.index}/>));
+    let renderedTiles = allTiles.map(i => (<MenuTiles key={Math.random()} num={i.index}/>));
     return (
-      <div id="pt-main" class="pt-perspective">
+      <div id="pt-main" className="pt-perspective">
+        <h1> Rendering tiles </h1>
         {renderedTiles}
       </div>
     );
@@ -101,5 +102,7 @@ $.getJSON('data/events.json', d => React.render(<App data={d} />, document.getEl
 .fail(() => React.render(<ServerError />, document.getElementById('root')));
 */
 
-$.getJSON('data/tiles.json', d => React.render(<renderTiles data={d} />, document.getElementById('root')))
+$.getJSON('data/tiles.json', d => {
+  React.render(<RenderTiles data = {d} />, document.getElementById('root'));
+})
 .fail(() => React.render(<ServerError />, document.getElementById('root')));
