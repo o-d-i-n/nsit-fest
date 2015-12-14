@@ -66,7 +66,6 @@ class RenderTiles extends React.Component {
     let renderedTiles = allTiles.map(i => (<MenuTiles key={Math.random()} num={i.index}/>));
     return (
       <div id="pt-main" className="pt-perspective">
-        <h1> Rendering tiles </h1>
         {renderedTiles}
       </div>
     );
