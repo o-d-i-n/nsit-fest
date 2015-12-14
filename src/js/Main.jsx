@@ -63,7 +63,7 @@ class MenuTiles extends React.Component {
 class RenderTiles extends React.Component {
   render() {
     let allTiles = this.props.data;
-    let renderedTiles = allTiles.map(i => (<MenuTiles key={Math.random()} num={i.index}/>));
+    let renderedTiles = allTiles.map(i => (<MenuTiles key={i.index} num={i.index}/>));
     return (
       <div id="pt-main" className="pt-perspective">
         {renderedTiles}
