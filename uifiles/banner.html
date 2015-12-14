@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <style>
 body
 {
@@ -26,6 +28,7 @@ height:100%;
 	transform:rotateZ(45deg);
 	box-shadow:0px 0px 8px rgb(101, 98, 98);
 	overflow:hidden;
+	font-family: 'Oswald', sans-serif;
 }
 #centerpiece
 {
@@ -72,41 +75,113 @@ height:100%;
 }
 #piece1
 {
+ display:block;
+ text-decoration:none;
+ border:none;
+ outline:none;
  top:calc(50% - 375px);
  left:calc(50% + 75px);
  background-color:red;
+ transition:box-shadow 0.2s;
+}
+#piece1:active
+{
+ box-shadow:0px 0px 0px rgb(101, 98, 98);
 }
 #piece2
 {
+	display:block;
+ text-decoration:none;
+ border:none;
+ outline:none;
  bottom:calc(50% - 375px);
  left:calc(50% + 75px);
  background-color:blue;
+  transition:box-shadow 0.2s;
+
+}
+#piece2:active
+{
+ box-shadow:0px 0px 0px rgb(101, 98, 98);
 }
 #piece3
 {
+	display:block;
+ text-decoration:none;
+ border:none;
+ outline:none;
  top:calc(50% - 150px);
  left:calc(50% + 300px);
  background-color:grey;
+  transition:box-shadow 0.2s;
+
+}
+#piece3:active
+{
+ box-shadow:0px 0px 0px rgb(101, 98, 98);
 }
 #piece4
 {
+	display:block;
+ text-decoration:none;
+ border:none;
+ outline:none;
  top:calc(50% - 375px);
  right:calc(50% + 75px);
  background-color:black;
+  transition:box-shadow 0.2s;
+}
+
+#piece4:active
+{
+ box-shadow:0px 0px 0px rgb(101, 98, 98);
 }
 #piece5
 {
+	display:block;
+ text-decoration:none;
+ border:none;
+ outline:none;
  bottom:calc(50% - 375px);
  right:calc(50% + 75px);
  background-color:yellow;
+  transition:box-shadow 0.2s;
+}
+#piece5:active
+{
+ box-shadow:0px 0px 0px rgb(101, 98, 98);
 }
 #piece6
 {
+	display:block;
+ text-decoration:none;
+ border:none;
+ outline:none;
  top:calc(50% - 150px);
  right:calc(50% + 300px);
  background-color:green;
+  transition:box-shadow 0.2s;
 }
 
+#piece6:active
+{
+ box-shadow:0px 0px 0px rgb(101, 98, 98);
+}
+.menubuttons{
+	
+	position:absolute;
+	
+	top:0px;
+	left:0px;
+	width:100%;
+	padding-top:45%;
+	text-align:center;
+	font-size:26px;
+	color:#FFF;
+	height:55%;
+	transform:rotateZ(-45deg);
+	font-family:'Open sans', sans-serif;
+}
 </style>
 
 </head>
@@ -130,24 +205,24 @@ height:100%;
 </div>
 
 
-<div class="bigpuzzle" id="piece1">
-
-</div>
-<div class="bigpuzzle" id="piece2">
-
-</div>
-<div class="bigpuzzle" id="piece3">
-
-</div>
-<div class="bigpuzzle" id="piece4">
-
-</div>
-<div class="bigpuzzle" id="piece5">
-
-</div>
-<div class="bigpuzzle" id="piece6">
-
-</div>
+<a class="bigpuzzle" id="piece1">
+<div class="rel"><div class="menubuttons">LINK 1</div></div>
+</a>
+<a class="bigpuzzle" id="piece2">
+<div class="rel"><div class="menubuttons">LINK 2</div></div>
+</a>
+<a class="bigpuzzle" id="piece3">
+<div class="rel"><div class="menubuttons">LINK 3</div></div>
+</a>
+<a class="bigpuzzle" id="piece4">
+<div class="rel"><div class="menubuttons">LINK 4</div></div>
+</a>
+<a class="bigpuzzle" id="piece5">
+<div class="rel"><div class="menubuttons">LINK 5</div></div>
+</a>
+<a class="bigpuzzle" id="piece6">
+<div class="rel"><div class="menubuttons">LINK 6</div></div>
+</a>
 <!--height:320px;-->
 
 <script>
