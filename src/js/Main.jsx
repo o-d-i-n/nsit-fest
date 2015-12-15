@@ -1,5 +1,7 @@
 'use strict';
 
+import React from 'react';
+
 class Event extends React.Component {
   render() {
     return (
@@ -45,35 +47,6 @@ class EventList extends React.Component {
   }
 }
 
-class MenuTiles extends React.Component {
-  render() {
-    return (
-      <div className={"pt-page pt-page-"+this.props.num}>
-        <div className="rel">
-          <div>
-            <h1><span>Nsit's</span><strong>Moksha</strong> '15</h1>
-          </div>
-          <div></div>
-        </div>
-      </div>
-    );
-  }
-}
-
-class RenderTiles extends React.Component {
-  render() {
-    let allTiles = this.props.data;
-    let renderedTiles = allTiles.map(i => (<MenuTiles key={i.index} num={i.index}/>));
-    return (
-      <div id="pt-main" className="pt-perspective">
-        {renderedTiles}
-      </div>
-    );
-  }
-}
-
-
-
 class App extends React.Component {
   render() {
     return (
@@ -96,12 +69,9 @@ class ServerError extends React.Component {
   }
 }
 
-/*
-$.getJSON('data/events.json', d => React.render(<App data={d} />, document.getElementById('root')))
-.fail(() => React.render(<ServerError />, document.getElementById('root')));
-*/
 
-$.getJSON('data/tiles.json', d => {
-  React.render(<RenderTiles data = {d} />, document.getElementById('root'));
-})
-.fail(() => React.render(<ServerError />, document.getElementById('root')));
+$.getJSON('json/events.json', d => React.render(<App data={d} />, document.getElementById("root")))
+.fail(() => React.render(<ServerError />, document.getElementById("root")));
+
+
+

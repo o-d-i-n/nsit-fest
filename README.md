@@ -2,13 +2,13 @@
 A react based frontend for NSIT fests.
 
 # Build instructions
-Make sure you have [babel cli](https://babeljs.io/docs/setup/#babel_cli)
+Make sure you have [webpack and webpack-dev-server](http://webpack.github.io/docs/tutorials/getting-started/)
 ```
-npm i babel-cli -g
+npm i webpack webpack-dev-server -g
 ```
-Then run the build script to transform ES2015 JSX files in src/js to dist/js
+Then run the start script to setup an express server and get Main.js served
 ```
-npm run build
+npm start
 ```
 
 # Todo
