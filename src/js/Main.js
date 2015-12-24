@@ -4,10 +4,10 @@ import React from 'react';
 let { Component } = React;
 import ReactDOM from 'react-dom';
 import { Router, Route, Link } from 'react-router';
-import EventList from '../EventList';
-import UserPage from '../UserPage';
-import Categories from '../Categories';
-import Category from '../Category';
+import EventList from './EventList';
+import UserPage from './UserPage';
+import Categories from './Categories';
+import Category from './Category';
 
 class Home extends Component {
   render() {
