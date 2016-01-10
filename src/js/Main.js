@@ -3,11 +3,24 @@
 import React from 'react';
 let { Component } = React;
 import ReactDOM from 'react-dom';
-import { Router, Route, Link } from 'react-router';
+import { Router, Route, IndexRoute, Link } from 'react-router';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import EventList from './EventList';
 import UserPage from './UserPage';
 import Categories from './Categories';
 import Category from './Category';
+
+
+class Index extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Index</h1>
+        <p>Animations with React Router are not different than any other animation.</p>
+      </div>
+    )
+  }
+}
 
 class Home extends Component {
   render() {
@@ -16,6 +29,8 @@ class Home extends Component {
     );
   }
 }
+
+
 class App extends Component {
   constructor(p) {
     super(p);
@@ -35,7 +50,11 @@ class App extends Component {
           <li><Link to={`/category`}>Categories</Link></li>
         </ul>
         <div className="container">
-          {this.props.children || <Home />}
+          <ReactCSSTransitionGroup component="div" transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+            {React.cloneElement(this.props.children, {
+              key: this.props.location.pathname
+            })}
+          </ReactCSSTransitionGroup>
         </div>
       </div>
     );
@@ -56,6 +75,7 @@ class ServerError extends Component {
 ReactDOM.render((
   <Router>
     <Route path="/" component={App} >
+      <IndexRoute component={Home}/>
       <Route path="user" component={UserPage}/>
       <Route path="events" component={EventList}/>
       <Route path="category" component={Categories}>
