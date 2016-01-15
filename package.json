@@ -25,9 +25,7 @@
     "react-router-component": "^0.28.0",
     "react-router-component-transition": "^0.2.0",
     "webpack": "^1.12.11",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "devDependencies": {
+    "webpack-dev-server": "^1.14.1",
     "babel-core": "^6.3.17",
     "babel-loader": "^6.2.0",
     "babel-plugin-transform-react-jsx": "^6.3.13",
