@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "./node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,9 @@
     "react-dom": "^0.14.3",
     "react-router": "^1.0.3",
     "react-router-component": "^0.28.0",
-    "react-router-component-transition": "^0.2.0"
+    "react-router-component-transition": "^0.2.0",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
