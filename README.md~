@@ -13,7 +13,7 @@ npm start
 ```
 
 # Todo
-* [x] Use service worker to have the site working offline
+* Use service worker to have the site working offline
 * [ ] Plan basic components required for the template
   * Event Calendar
   * Event Cards
