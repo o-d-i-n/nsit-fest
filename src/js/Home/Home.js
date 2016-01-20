@@ -1,7 +1,6 @@
 'use strict'
 
-import React from 'react';
-let { Component } = React;
+import React, { Component } from 'react';
 import { Router, Route, Link } from 'react-router';
 
 class Home extends Component {

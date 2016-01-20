@@ -1,7 +1,6 @@
 'use strict'
 
-import React from 'react';
-let { Component } = React;
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 class Event extends Component {
