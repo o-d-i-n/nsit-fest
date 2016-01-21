@@ -6,12 +6,13 @@ import { Link } from 'react-router';
 
 class Event extends Component {
   render() {
+    let classVal = "col-md-6 event-card "+this.props.data.category;
     return (
-      <div>
+      <div className={classVal}>
         <h3>{this.props.data.title} <small><Link to={`/category/${this.props.data.category}`}>{this.props.data.category}</Link></small></h3>
         <div className="row">
-          <div className="col-md-6">Last date: {this.props.data.last_date}</div>
-          <div className="col-md-6">Event date: {this.props.data.event_date}</div>
+          <div className="col-md-6"><i className="fa fa-calendar-times-o"></i>  {this.props.data.last_date}</div>
+          <div className="col-md-6"><i className="fa fa-calendar"></i>  {this.props.data.event_date}</div>
         </div>
         <p>{this.props.data.desc}</p>
       </div>

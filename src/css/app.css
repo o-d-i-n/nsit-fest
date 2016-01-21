@@ -26,3 +26,39 @@
   color: #bbbbbb;
   text-decoration: none;
 }
+.event-card
+{
+  padding: 0px;
+}
+.music
+{
+  background-color:rgb(198, 189, 212);
+}
+.art
+{
+  background-color:#BDD4D4;
+}
+.music>h3
+{
+  background: transparent linear-gradient(#6F5499, #8E7DAA) repeat scroll 0% 0%;
+}
+.art>h3
+{
+  background: transparent linear-gradient(#32A1BF, #609FFF) repeat scroll 0% 0%
+}
+.event-card>h3
+{
+  text-align: center;
+  padding: 10px 0px;
+  margin: 0px;
+  color:#FFF;
+}
+.event-card>div.row>div
+{
+  text-align: center;
+  white-space: pre;
+}
+.event-card>p
+{
+  padding: 5px 20px;
+}
