@@ -1,7 +1,6 @@
 'use strict'
 
-import React from 'react';
-let { Component } = React;
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, Link } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'

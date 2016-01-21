@@ -1,7 +1,6 @@
 'use strict'
 
-import React from 'react';
-let { Component } = React;
+import React, { Component } from 'react';
 
 export default class UserPage extends Component {
   render() {
