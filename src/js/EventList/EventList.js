@@ -7,7 +7,7 @@ let bgColors = {
   "music": "rgb(198, 189, 212)",
   "art": "#BDD4D4"
 };
-    
+
 let headColors = {
   "music": "transparent linear-gradient(#6F5499, #8E7DAA) repeat scroll 0% 0%",
   "art": "transparent linear-gradient(#32A1BF, #609FFF) repeat scroll 0% 0%"
@@ -16,7 +16,7 @@ let headColors = {
 class Event extends Component {
   constructor(props) {
     super(props);
-    
+
     this.styles = {
       cardWrap: {
         padding: '0px',
@@ -38,10 +38,10 @@ class Event extends Component {
       }
     };
   }
+
   render() {
-    let classVal = "col-md-6 "+this.props.data.category;
     return (
-      <div style={this.styles.cardWrap} className={classVal}>
+      <div style={this.styles.cardWrap} className="col-md-6">
         <h3 style={this.styles.wrapHead}>{this.props.data.title} <small><Link to={`/category/${this.props.data.category}`}>{this.props.data.category}</Link></small></h3>
         <div className="row">
           <div style={this.styles.eventTime} className="col-md-6"><i className="fa fa-calendar-times-o"></i>  {this.props.data.last_date}</div>
@@ -56,7 +56,7 @@ class Event extends Component {
 export default class EventList extends Component {
   constructor(p) {
     super(p);
-    this.state = { 
+    this.state = {
       keyword: "",
       data: [],
     };
