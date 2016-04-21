@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, Link } from 'react-router';
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import EventList from './EventList';
 import UserPage from './UserPage';
@@ -72,7 +72,7 @@ class ServerError extends Component {
 }
 
 ReactDOM.render((
-  <Router>
+  <Router history={browserHistory}>
     <Route path="/" component={App} >
       <IndexRoute component={Home}/>
       <Route path="user" component={UserPage}/>
