@@ -60,7 +60,7 @@ export default class EventList extends Component {
       keyword: "",
       data: [],
     };
-    $.getJSON('../../json/events.json', d => this.setState({data: d.events}));
+    $.getJSON('/nsit-fest/json/events.json', d => this.setState({data: d.events}));
   }
   searchHandler (e) {
     this.setState({ keyword: e.currentTarget.value || "" })
